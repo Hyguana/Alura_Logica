@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write('<br>');
+    }
+
+    function escreva(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    var anoAtual    = new Date().getFullYear();
+    var anoDescBR   = 1500;
+    var mediaNasc   = 28;
+
+    escreva('Total de ' + (anoAtual - anoDescBR) / mediaNasc + ' "Gerações" até agora.')
+</script>
