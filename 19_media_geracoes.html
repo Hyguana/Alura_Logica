@@ -11,6 +11,7 @@
     var anoAtual    = new Date().getFullYear();
     var anoDescBR   = 1500;
     var mediaNasc   = 28;
+    var mediaGera   = (anoAtual - anoDescBR) / mediaNasc;
 
-    escreva('Total de ' + (anoAtual - anoDescBR) / mediaNasc + ' "Gerações" até agora.')
+    escreva('Total de ' + Math.round(mediaGera) + ' "Gerações" até agora.')
 </script>
