@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h2>Segnda Função</h2>
+<script>
+    //Função para Pular Linha. Sem parâmetro.
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    //Fnção Escreva, Parâmetro Variavel para gardar as informações e exibir.
+    function escreva(varMostra){
+        document.write(varMostra);
+    }
+
+    function escrevaPL(linhaBaixo){
+        escreva(linhaBaixo);
+        pulaLinha();
+    }
+
+    var anoAtual = new Date().getFullYear();
+    escrevaPL("Teste de Funções.");
+    escrevaPL("Teste com cálculos.");
+    escrevaPL("Daniel tem " + (anoAtual - 1989) + " anos.");
+    escrevaPL("Emilly tem " + (anoAtual - 2013) + " anos");
+    escrevaPL("Daiane tem " + (anoAtual - 1996) + " anos.");
+</script>
