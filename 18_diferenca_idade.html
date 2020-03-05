@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+    }
+    
+    function escreva(varMostra){
+        document.write(varMostra);
+    }
+
+    function escrevaPL(linhaBaixo){
+        escreva(linhaBaixo);
+        pulaLinha();
+    }
+
+    var minhaIdade = 31;
+    var idadeIrmao = 36;
+
+    escrevaPL("Nossa diferença de idade é: " + (idadeIrmao - minhaIdade) + " anos.");
+</script>
