@@ -8,10 +8,14 @@
         document.write(frase);
         pulaLinha();
     }
+
     function calcImc(altura, peso){
         var imc = peso / (altura * altura);
-        escreva('O IMC Calculado é: ' + imc);
+        //retorna o valor
+        return(imc);
     }
-    calcImc(1.79,80);
-
+    var imc1 = calcImc(1.79,80);
+    var imc2 = calcImc(1.80,85);
+    escreva(imc1);
+    escreva(imc2);
 </script>
