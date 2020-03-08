@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function escreve(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random () * 13);
+    var chute = parseInt(prompt('Digite um número. Dente 0 a 11.'));
+
+    if (chute == numeroPensado){
+        document.write('Você acertou. Meus parabéns.');
+    } else{
+        document.write('Você errou, que pena. Tente novamente!');
+    }
+
+</script>

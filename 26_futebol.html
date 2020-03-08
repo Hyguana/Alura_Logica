@@ -4,7 +4,7 @@
         document.write("<br>");
     }
 
-    function escreva(frase){
+    function escreve(frase){
         document.write(frase);
         pulaLinha();
     }
@@ -15,5 +15,20 @@
     
     var pontos = vitorias * 3 + empates;
 
-    escreva(pontos + ' pontos nesta etapa.');
+    escreve ('Pontos anteriores 28.');
+
+    if(pontos > 28) {
+        escreve ("Seu time está melhor do que no ano passado.");
+    }
+
+    if(pontos < 28) {
+        escreve ("Seu time está pior do que no ano passado.");
+    }
+
+    if(pontos == 28) {
+        escreve ("Seu time está igual ao ano passado.");
+    }
+
+    escreve('Pontos atuais '+ pontos);
+    escreve ("FIM");
 </script>
