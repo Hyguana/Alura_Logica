@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+    var loginUser   = 'daniel';
+    var passUser    = 'daniel';
+
+    var maximoTentativas = 3;
+    var tentativaAtual  = 1;
+  
+    while(tentativaAtual <= maximoTentativas){
+        
+        var loginInfo   = prompt('Insira seu "Login".: ');
+        var passInfor   = prompt('Insira sua Senha.: ');
+
+        if(loginUser == loginInfo && passUser == passInfor && tentativaAtual < maximoTentativas){
+        
+            document.write('<h1>Bem vindo, '+ loginUser +', "Login" efetuado com sucesso.</h1>');
+            tentativaAtual = maximoTentativas;
+        
+        }else{
+            if (tentativaAtual == 3){
+                    alert("Máximo de tentativas alcançadas." + "\n" + "Contacte o administrador.");
+                    document.write('<h1>Máximo de tentativas alcançadas.' + '<br>' + 'Contacte o administrador.</h1>');
+                }else{
+                    alert('"Login" Invárlido. Tente novamente. ' + loginInfo);
+                }
+                tentativaAtual  = tentativaAtual + 1;
+        }
+    }
+</script>
