@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+    var anoAtual = new Date().getFullYear();
+        
+    var anoCopa = 1930;
+
+    while(anoCopa <= anoAtual){
+        mostra('Teve copa em .: ' + anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+
+    mostra('Proxima Copra serrá daqui em .: ' + (anoCopa + 4));
+
+</script>
