@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script>
+        var userName = "daniel";
+        var password = "daniel";
+
+        var maxTentativas = 3;
+        var tentativaAtual = 1;
+
+        while (tentativaAtual < maxTentativas){
+
+            var userInfor = prompt('Insira o Usuário.');
+            var passInfor = prompt('Insira a Senha');
+
+            if (userInfor == userName && passInfor == password){
+                document.write('<h1>' + userName + ' , seja bem vindo(a). <br> "Login" efetuado com Sucesso.</h1>');
+                tentativaAtual = maxTentativas;
+            }else{
+                alert(userInfor + ', Usuário ou Senha incorretos, Tente novamente.');
+                tentativaAtual = tentativaAtual + 1;
+                if(tentativaAtual == maxTentativas){
+                    document.write('<h1> Atingiu o máximo de tentatias. <br> Contate o Suporte do sistema.');
+                }
+            }
+            
+        }
+</script>
