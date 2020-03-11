@@ -7,7 +7,7 @@
     var segredo = 5;
 
     var input = document.querySelector("input");
-
+    input.focus();
     function verifica() {
 
         if(input.value == segredo) {
@@ -19,7 +19,7 @@
         }
 
                 input.value = "";
-
+                input.focus();
     }
 
     var button = document.querySelector("button");
