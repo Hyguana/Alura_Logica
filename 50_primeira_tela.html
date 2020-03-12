@@ -3,6 +3,23 @@
     var canvas = document.querySelector('canvas');
     var brush = canvas.getContext('2d');
     
+    /*
+    //Área de fundo
     brush.fillStyle = 'Lightgrey';
     brush.fillRect(0,0,600,400);
+    */
+
+    brush.fillStyle = 'Green';
+    brush.fillRect(0,0,200,400);
+
+    brush.fillStyle = 'Red';
+    brush.fillRect(400,0,200,400);
+
+    //Fazendo Triangulo
+    brush.fillStyle = 'Yellow';
+    brush.beginPath();
+    brush.moveTo(300,200);
+    brush.lineTo(200,400);
+    brush.lineTo(400,400);
+    brush.fill();
 </script>
