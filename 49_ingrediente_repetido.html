@@ -10,12 +10,14 @@
     var contador = 1;
 
     while( contador <= quantidade) {
+        if(ingrediente != ingredientes){
+            var ingrediente = prompt("Informe o ingrediente " + contador);
 
-        var ingrediente = prompt("Informe o ingrediente " + contador);
+            ingredientes.push(ingrediente);
 
-        ingredientes.push(ingrediente);
-
-        contador++;
+            contador++;
+        }
+        
     }
 
     console.log(ingredientes);
