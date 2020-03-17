@@ -7,8 +7,8 @@
     pincel.fillRect(0,0,800,400);
 
     function exibeAlerta(eventClick){
-        var x = eventClick.pageX;
-        var y = eventClick.pageY;
+        var x = eventClick.pageX - tela.offsetLeft;
+        var y = eventClick.pageY - tela.offsetTop;
 
         alert(x+','+y);
         console.log(eventClick);
