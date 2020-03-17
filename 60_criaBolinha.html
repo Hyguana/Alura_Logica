@@ -9,8 +9,11 @@
     function exibeAlerta(eventClick){
         var x = eventClick.pageX - tela.offsetLeft;
         var y = eventClick.pageY - tela.offsetTop;
-
-        alert(x+','+y);
+        pincel.fillStyle='red';
+        pincel.beginPath();
+        pincel.arc(x,y,5,0,2*3.14);
+        pincel.fill();
+        //alert(x+','+y);
         console.log(eventClick);
     }
 
