@@ -29,4 +29,16 @@
 
     tela.onclick = desenhaCirculo;
 
+    function mudaCor(){
+        corAtual++;
+
+        if(corAtual>= cores.length){
+            corAtual = 0;
+        }
+        alert('Trocou de Cor.');
+        return false;
+    }
+
+    tela.oncontextmenu = mudaCor;
+
 </script>
