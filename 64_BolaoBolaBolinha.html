@@ -14,12 +14,19 @@
 
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
+
         
         console.log(x+','+y);
-
-        if (evento.shiftKey){
+        
+        if(evento.shiftKey && evento.altkey){
+            alert('Pressione somente uma tecla por vez!');
+        } else if (evento.shiftKey && raio + 10 <= 40){
             raio = raio + 10;
+        } else if (evento.altkey && raio - 5 >= 10){
+            raio = raio - 5;
         }
+        
+
         pincel.fillStyle = cores[corAtual];
         pincel.beginPath();
         pincel.arc(x, y, raio, 0, 2 * 3.14);
