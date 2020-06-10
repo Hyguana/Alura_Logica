@@ -46,7 +46,18 @@
             setInterval(updateScreen,20);
 
             function getToKey(event){
-                //
+                if(event.keyCode==up){
+                    y = y - rate;
+                }
+                else if(event.keyCode==down){
+                    y = y + rate;
+                }
+                else if(event.keyCode==left){
+                    x = x - rate;
+                }
+                else if(event.keyCode==right){
+                    x = x + rate;
+                }
             }
 
             document.onkeydown = getToKey;
