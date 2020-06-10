@@ -17,6 +17,16 @@
             var x = 20;
             var y = 20;
 
+            // Keyboard's
+            var left = 37;
+            var up = 38;
+            var right = 39;
+            var down = 40;
+
+            // Increment rate
+        
+            var rate = 10;
+
             function drawCircle(x,y,radius){
                 brush.fillStyle = 'blue';
                 brush.beginPath();
@@ -34,6 +44,12 @@
             }
 
             setInterval(updateScreen,20);
+
+            function getToKey(event){
+                //
+            }
+
+            document.onkeydown = getToKey;
             
         </script>
     </body>
