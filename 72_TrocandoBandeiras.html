@@ -7,9 +7,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
-        <h1>Change Flag's</h1>
         <canvas width="600" height="400"></canvas>
         <script>
+            function desingBrazilFlag(){
+                var screen = document.querySelector('canvas');
+                var brush = screen.getContext('2d');
+                
+                brush.fillStyle="green";
+                brush.fillRect(0, 0, 600, 400);
+                
+                brush.fillStyle="yellow";
+                brush.beginPath();
+                brush.moveTo(300, 50);
+                brush.lineTo(50, 200);
+                brush.lineTo(550, 200);
+                brush.fill();
+
+                brush.beginPath();
+                brush.moveTo(50, 200);
+                brush.lineTo(300, 350);
+                brush.lineTo(550, 200);
+                brush.fill();
+
+                brush.arc(300,200,100,0,2*3.14);
+                brush.fill();
+            }
             
         </script>
     </body>
