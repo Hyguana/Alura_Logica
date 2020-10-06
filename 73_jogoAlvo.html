@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <head>
     <meta charse="UTF-8">
+    <script>
+        
+    </script>
 </head>
 <body>
-    <canvas width="600" heigth="400"></canvas>
+    <canvas width="1024" heigth="768"></canvas>
     <script>
-                
+        var eixoX = 1024;
+        var eixoY = 768;                
         var tela = document.querySelector('canvas');
         var pincel =tela.getContext('2d');
 
         pincel.fillStyle = 'lightgray';
-        pincel.fillRect(0,0,600,400);
+        pincel.fillRect(0,0,eixoX,eixoY);
 
         var raio = 10;
 
@@ -21,8 +25,8 @@
             pincel.fill();
         }
 
-        function limpaTela(){
-            pincel.clearRect(0,0,600,400);
+        function limpaTela(0,0,eixoX,eixoY){
+            pincel.clearRect(0,0,eixoX,eixoY);
         }
         
         function drawTarget(x,y){
@@ -35,8 +39,8 @@
             return Math.floor(Math.random() *max);
         }
         
-        var xRandom = randomTarget(600);
-        var yRandom = randomTarget(400);
+        var xRandom = randomTarget(eixoX);
+        var yRandom = randomTarget(eixoY);
 
         drawTarget(xRandom, yRandom);
 
