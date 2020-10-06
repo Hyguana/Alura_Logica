@@ -2,14 +2,14 @@
 <head>
     <meta charse="UTF-8">
     <script>
-        
+        var eixoX = 1024;
+        var eixoY = 768;  
     </script>
 </head>
 <body>
     <canvas width="1024" heigth="768"></canvas>
     <script>
-        var eixoX = 1024;
-        var eixoY = 768;                
+         
         var tela = document.querySelector('canvas');
         var pincel =tela.getContext('2d');
 
@@ -25,7 +25,7 @@
             pincel.fill();
         }
 
-        function limpaTela(0,0,eixoX,eixoY){
+        function limpaTela(){
             pincel.clearRect(0,0,eixoX,eixoY);
         }
         
@@ -44,7 +44,6 @@
 
         drawTarget(xRandom, yRandom);
 
-        
     </script>
 </body>
 </html>
