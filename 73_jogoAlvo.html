@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <head>
     <meta charse="UTF-8">
-    <script>
-        var eixoX = 1024;
-        var eixoY = 768;  
-    </script>
+
 </head>
 <body>
-    <canvas width="1024" heigth="768"></canvas>
+    <canvas width="600" height="400"></canvas>
     <script>
-         
+
         var tela = document.querySelector('canvas');
         var pincel =tela.getContext('2d');
 
         pincel.fillStyle = 'lightgray';
-        pincel.fillRect(0,0,eixoX,eixoY);
+        pincel.fillRect(0,0,600,400);
 
         var raio = 10;
 
@@ -26,12 +23,12 @@
         }
 
         function limpaTela(){
-            pincel.clearRect(0,0,eixoX,eixoY);
+            pincel.clearRect(0, 0, 600, 400);
         }
         
-        function drawTarget(x,y){
-        drawCircle(x, y, raio +20, 'red');
-        drawCircle(x, y, raio +10, 'white');
+        function drawTarget(x, y){
+        drawCircle(x, y, raio+20, 'red');
+        drawCircle(x, y, raio+10, 'white');
         drawCircle(x, y, raio, 'red');
         }
 
@@ -39,11 +36,14 @@
             return Math.floor(Math.random() *max);
         }
         
-        var xRandom = randomTarget(eixoX);
-        var yRandom = randomTarget(eixoY);
+        function updateScreen(){
+            limpaTela();
+            var xRandom = randomTarget(600);
+            var yRandom = randomTarget(400);
+            drawTarget(xRandom, yRandom);
+        }
 
-        drawTarget(xRandom, yRandom);
-
+        setInterval(updateScreen, 1000);
     </script>
 </body>
 </html>
