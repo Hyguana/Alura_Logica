@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <head>
     <meta charse="UTF-8">
-
+    <script>
+        var xAxis = 600;
+        var yAxis = 400;
+    </script>
 </head>
+<style>
+    canvas{
+        border: solid 1px;
+    }
+</style>
 <body>
     <canvas width="600" height="400"></canvas>
     <script>
@@ -11,7 +19,7 @@
         var pincel =tela.getContext('2d');
 
         pincel.fillStyle = 'lightgray';
-        pincel.fillRect(0,0,600,400);
+        pincel.fillRect(0,0,xAxis,yAxis);
 
         var raio = 10;
 
@@ -23,7 +31,7 @@
         }
 
         function limpaTela(){
-            pincel.clearRect(0, 0, 600, 400);
+            pincel.clearRect(0, 0, xAxis, yAxis);
         }
         
         function drawTarget(x, y){
@@ -38,8 +46,8 @@
         
         function updateScreen(){
             limpaTela();
-            var xRandom = randomTarget(600);
-            var yRandom = randomTarget(400);
+            var xRandom = randomTarget(xAxis);
+            var yRandom = randomTarget(yAxis);
             drawTarget(xRandom, yRandom);
         }
 
