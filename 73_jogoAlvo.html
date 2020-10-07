@@ -7,6 +7,8 @@
     </script>
 </head>
 <style>
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html{height:100%;width:100%;}
     canvas{
         border: solid 1px;
     }
@@ -17,6 +19,9 @@
 
         var tela = document.querySelector('canvas');
         var pincel =tela.getContext('2d');
+
+        var xRandom = randomTarget;
+        var yRandom = randomTarget;
 
         pincel.fillStyle = 'lightgray';
         pincel.fillRect(0,0,xAxis,yAxis);
@@ -46,12 +51,22 @@
         
         function updateScreen(){
             limpaTela();
-            var xRandom = randomTarget(xAxis);
-            var yRandom = randomTarget(yAxis);
             drawTarget(xRandom, yRandom);
         }
 
         setInterval(updateScreen, 1000);
+
+        function alertClick(evento){
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+
+            if(){
+                alert('Acertou!');
+            }
+
+        }
+
+        tela.onclick = alertClick;
     </script>
 </body>
 </html>
