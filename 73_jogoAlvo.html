@@ -15,20 +15,19 @@
     <script>
 
         var tela = document.querySelector('canvas');
-        var pincel =tela.getContext('2d');
-
-        var xRandom = randomTarget;
-        var yRandom = randomTarget;
+        var pincel = tela.getContext('2d');
 
         pincel.fillStyle = 'lightgray';
         pincel.fillRect(0, 0, 600, 400);
 
         var raio = 10;
-
+        var xRandom;
+        var yRandom;
+        
         function drawCircle(x, y, raio, cor){
             pincel.fillStyle = cor;
             pincel.beginPath();
-            pincel.arc(x, y, raio,0 , 2 * Math.PI);
+            pincel.arc(x, y, raio, 0, 2 * Math.PI);
             pincel.fill();
         }
 
@@ -48,8 +47,8 @@
         
         function updateScreen(){
             limpaTela();
-            var xRandom = randomTarget(600);
-            var yRandom = randomTarget(400);
+            xRandom = randomTarget(600);
+            yRandom = randomTarget(400);
             drawTarget(xRandom, yRandom);
         }
 
@@ -58,14 +57,13 @@
         function alertClick(evento){
             var x = evento.pageX - tela.offsetLeft;
             var y = evento.pageY - tela.offsetTop;
-            alert(randomTarget);
-            alert(randomTarget);
-            /*if((x > xRandom - raio)
+            
+            if((x > xRandom - raio)
                 && (x<xRandom + raio) 
                 && (y>yRandom - raio)
                 && (y<yRandom + raio)){
                 alert('Acertou!');
-            }*/
+            }
 
         }
 
