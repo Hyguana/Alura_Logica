@@ -19,7 +19,14 @@
 
         brush.fillStyle = 'lightgray';
         brush.fillRect(0, 0, 600, 400);
-        function drawSquare(x, y, size, color){
+        
+        function drawSquare(x, y, size, size){
+            brush.fillStyle = color;
+            brush.fillRect(x, y, size, size);
+            brush.fill();
+        }
+
+        function drawCircle(x, y, size, color){
             brush.fillStyle = color;
             brush.beginPath();
             brush.arc(x, y, radius, 0, 2*Math.PI);
